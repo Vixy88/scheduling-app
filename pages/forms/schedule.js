@@ -42,9 +42,9 @@ export default function Schedule() {
 
   return (
     <div className="main">
-      <h1>Schedule your meetings here</h1>
       <div>
-        <form onSubmit={handleSubmit} id="schedulingForm">
+        <h1 className="container">Schedule your meetings here</h1>
+        <form onSubmit={handleSubmit} id="schedulingForm" className="container">
           <div className="container">
             <div>
               <label htmlFor="firstName">First Name</label>
@@ -59,7 +59,7 @@ export default function Schedule() {
               <input type="text" id="empId" name="empId" required />
             </div>
           </div>
-          <div style={{ display: "flex" }}>
+          <div className="container" style={{ display: "flex" }}>
             <div>
               <input type="date" id="datePicker" name="datePicker" required />
             </div>
@@ -70,10 +70,12 @@ export default function Schedule() {
               <input type="time" id="endTime" name="endTime" required />
             </div>
           </div>
-          <div>
+          <div className="container">
             <button onClick={handleFormInputCreation}>Add More Bookings</button>
           </div>
-          <button type="submit">Submit</button>
+          <div className="container">
+            <button type="submit">Submit</button>
+          </div>
         </form>
       </div>
     </div>

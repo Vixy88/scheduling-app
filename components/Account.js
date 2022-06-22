@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Avatar from "./Avatar";
 import { supabase } from "../utils/supabaseClient";
+import Link from "next/link";
 
 export default function Account({ session }) {
   const [loading, setLoading] = useState(true);
@@ -76,6 +77,11 @@ export default function Account({ session }) {
           updateProfile({ username, website, avatar_url: url });
         }}
       />
+      <div>
+        <Link href="/forms/schedule">
+          <button>Schedule Meeting</button>
+        </Link>
+      </div>
       <div>
         <label htmlFor="email">Email</label>
         <input id="email" type="text" value={session.user.email} disabled />
