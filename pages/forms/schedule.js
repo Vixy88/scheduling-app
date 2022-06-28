@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { supabase } from "../../utils/supabaseClient.js";
 import { addMeetingDateandTime } from "../../components/AdditionalFormInput.js";
-import { bookingInstance } from "../../components/BookingInstance.js";
 
 export default function Schedule() {
   // Handles the submit event on form submit.
