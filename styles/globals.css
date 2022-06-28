@@ -430,3 +430,9 @@ button.primary,
   margin-bottom: 10px;
   text-decoration: none;
 }
+
+/* WIDTH */
+
+.w-33 {
+  width: 33.3%;
+}
