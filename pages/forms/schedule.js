@@ -1,7 +1,7 @@
-import { Router } from "next/router";
 import { useState, useEffect } from "react";
 import { supabase } from "../../utils/supabaseClient.js";
 import { addMeetingDateandTime } from "../../components/AdditionalFormInput.js";
+import { bookingInstance } from "../../components/BookingInstance.js";
 
 export default function Schedule() {
   // Handles the submit event on form submit.
@@ -56,7 +56,9 @@ export default function Schedule() {
             </div>
           </div>
           <div className="container" style={{ marginTop: "10px" }}>
-            <button onClick={addMeetingDateandTime}>Add More Bookings</button>
+            <button onClick={addMeetingDateandTime} id="addBookingBtn">
+              Add More Bookings
+            </button>
           </div>
           <div className="container" style={{ marginTop: "10px" }}>
             <button type="submit">Submit</button>

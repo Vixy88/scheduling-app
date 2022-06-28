@@ -18,19 +18,13 @@ export const addMeetingDateandTime = () => {
   lastDiv.after(div);
   div.append(date, startTime, endTime);
 
-  const bookingInstance2 = bookingInstance(1, 1, 1, 1);
+  let bookingList = [];
 
-  console.log(bookingInstance2);
+  function inputValues() {
+    bookingList.push(bookingInstance("1", "1", "1", "1"));
+    bookingList.push(bookingInstance("2", "2", "2", "2"));
+    console.log(bookingList);
+  }
 
-  // const addNewMeetingtoObject = (starttime, endtime, date) => {
-  //   this.starttime = starttime;
-  //   this.endtime = endtime;
-  //   this.date = date;
-  // };
-
-  // let scheduledMeetings = [];
-
-  // scheduledMeetings = new addNewMeetingtoObject(startTime, endTime, date);
-
-  // console.log(scheduledMeetings);
+  inputValues();
 };
