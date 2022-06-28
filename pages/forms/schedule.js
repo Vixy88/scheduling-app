@@ -19,6 +19,9 @@ export default function Schedule() {
         employeeid: event.target.empId.value,
       },
     ]);
+
+    console.log("Error:", error);
+    console.log("Data Inserted:", data);
   };
 
   return (
